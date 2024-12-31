@@ -86,8 +86,16 @@ public class MarkdownHeaderAnchorNormalizer extends SimpleFileVisitor<Path> {
    *
    * <ul>
    *   <li>Turn all characters to lowercase
-   *   <li>Remove all special characters; a special character is
+   *   <li>Remove all special character
    *   <li>Replace spaces with dashes
+   * </ul>
+   *
+   * A special character is a character that does not fall into one of the following categories:
+   *
+   * <ul>
+   *   <li>latin alphabet letters
+   *   <li>digits
+   *   <li>underscore, dash, and space characters
    * </ul>
    *
    * @param s the string to normalize
